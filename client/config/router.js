@@ -2,14 +2,12 @@
 
 // Basic configuration
 Router.configure({
-	autoRender: false,
     layoutTemplate: 'layout',
-    loadingTemplate: 'loading'
     notFoundTemplate: 'notFound',
     yieldTemplates: {
         'includesHeader': { to: 'includesHeader' },
         'includesFooter': { to: 'includesFooter' }
-    }
+    },
 
     unload: function() {
 	},
@@ -27,7 +25,7 @@ Router.configure({
 	}
 });
 
-// Router mapping
+// Route configuration
 Router.map(function() {
-	this.route('mainpage', {path: '/'});
+	this.route('home', {path: '/'});
 });

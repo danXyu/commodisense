@@ -1,2 +1,1 @@
-Meteor.startup(function () {
-});
+Meteor.subscribe('comods');

@@ -6,7 +6,9 @@
       "handlebar-helpers": {},
       "iron-router-progress": {},
       "semantic-ui": {},
-      "collection2": {}
+      "collection2": {},
+      "leaflet": {},
+      "bootstrap-slate": {}
     },
     "packages": {
       "iron-router": {
@@ -34,10 +36,20 @@
         "tag": "v0.3.7",
         "commit": "4c6c2dfd87af8cda321c80e1baea72842ad5c542"
       },
+      "leaflet": {
+        "git": "https://github.com/bevanhunt/meteor-leaflet.git",
+        "tag": "v0.3.6",
+        "commit": "d9e3bdb824145c1078e52945909bb1cf38724da5"
+      },
+      "bootstrap-slate": {
+        "git": "https://github.com/mickeyren/meteor-bootstrap-slate.git",
+        "tag": "v0.0.1",
+        "commit": "03e01f40019b63517c922b882821d3eb66b31140"
+      },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
-        "tag": "v0.2.36",
-        "commit": "d01745787de0711ffd095dcd212749d94a3fe0eb"
+        "tag": "v0.2.37",
+        "commit": "4531fc43dea7bab04e4647e9820fa52631408909"
       }
     }
   }

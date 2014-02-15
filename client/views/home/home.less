@@ -1,52 +1,59 @@
-@import '../../stylesheets/variables.less';
-@import '../../stylesheets/elements.less';
+// Base color scheme.
+@theme-black: #383D40;
+@theme-blue: #7CBDA1;
+@theme-pink: #F3C8B4;
+@theme-red: #DA807D;
+@theme-white: #F5F2F1;
 
+// Fonts.
+@import url('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+@font-family: "Open Sans Condensed";
 
-#main {
-    .boilerplate-feature.icon {
-        margin-top: 10px;
-        transition: 0.7s color;
+// Directions view.
+#directions {
+    font-family: @font-family, "Sans Serif";
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    margin-top: -55px;
+    margin-left: -50%;
+    width: 100%;
+    height: 55px;
+    z-index: 100;
+    border:3px solid @theme-red;
+    color: @theme-red;
+    border-radius: 5px;
+    background-color: @theme-white;
+    
+    .directions-container {
+        margin: 10 20 20 20px;
+        text-align: center;
 
-        &:hover {
-            color: @primaryIconColor;
+        h1 {
+            font-family: @font-family;
+            font-size: 24px;
+            font-weight: normal;
+            line-height: 15px;
         }
 
-        &.hover-orange.html5:hover {
-            color: @html5Orange;
+        span {
+            font-size: 16px;
+            font-style: italic;
         }
     }
+}
 
-    .features.grid {
-        width: 100%;
-        margin: 0%;
-        margin-top: 30px;
-    }
+// Filters view.
+#filters {
+    font-family: @font-family, "Sans Serif";
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    width: 50px;
+    z-index: 100;
+    border:3px solid @theme-red;
+    color: @theme-red;
+    border-radius: 5px;
+    background-color: @theme-white;
 
-    .main-content > .ui.two.column.grid {
-        padding-top: 20px;
-    }
-
-    .column > .icon-wrapper {
-        //line-height: 500px;
-        font-size: 2em;
-        color: @primaryIconColor;
-    }
-
-    @media (max-width: @largeDesktopWidth) {
-        .column > .icon-wrapper {
-            font-size: 1.5em;
-        }
-    }
-
-    @media (max-width: @mediumDesktopWidth) {
-        .column > .icon-wrapper {
-            font-size: 1em;
-        }
-    }
-
-    @media (max-width: @tabletWidth) {
-        .features.grid .headline {
-            display: none;
-        }
-    }
 }

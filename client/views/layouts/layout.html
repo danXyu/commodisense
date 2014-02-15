@@ -1,0 +1,17 @@
+<template name="layout">
+    <!-- Head: Title and Metatags -->
+    <head>
+        <title>Commodisense</title>
+    </head>
+
+    <!-- Yield Templates -->
+    <header>
+        {{yield 'includesHeader'}}
+    </header>
+    <div id="main">
+        {{yield}}
+    </div>
+    <footer>
+        {{yield 'includesFooter'}}
+    </footer>
+</template>
