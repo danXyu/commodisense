@@ -14,18 +14,18 @@
     font-family: @font-family, "Sans Serif";
     position: fixed;
     top: 100%;
-    left: 50%;
     margin-top: -55px;
-    margin-left: -50%;
     width: 100%;
     height: 55px;
     z-index: 100;
-    border:3px solid @theme-red;
+    border:2px solid @theme-red;
     color: @theme-red;
     border-radius: 5px;
     background-color: @theme-white;
     
     .directions-container {
+        position: fixed;
+        left: 10px;
         margin: 10 20 20 20px;
         text-align: center;
 
@@ -47,13 +47,59 @@
 #filters {
     font-family: @font-family, "Sans Serif";
     position: fixed;
-    right: 0px;
+    left: 0px;
     top: 50%;
-    width: 50px;
+    margin-top: -75px;
+    width: auto;
+    height: auto;
     z-index: 100;
-    border:3px solid @theme-red;
+    border:2px solid @theme-red;
+    color: @theme-red;
+    border-radius: 5px;
+    background-color: @theme-white;
+}
+
+.filters-container {
+    .filters-list {
+        margin-top: 12px;
+        list-style-type: none;
+
+        li {
+            margin-left: -37px;
+        }
+    }
+}
+
+// Global price styles.
+#globalPrice {
+    font-family: @font-family, "Sans Serif";
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+    border:2px solid @theme-red;
     color: @theme-red;
     border-radius: 5px;
     background-color: @theme-white;
 
+    h3 {
+        margin: 0 15px;
+    }
+}
+// Button.
+button {
+    position: fixed;
+    color: @theme-red;
+    font-style: italic;
+    width: auto;
+    height: 30px;
+    background-color: @theme-white;
+    margin-top: -30px;
+    right: 5px;
+
+    &:hover {
+        background-color: @theme-pink;
+    }
 }

@@ -14,12 +14,26 @@
     </div>
 </template>
 
-<!-- Filters Templates -->
+<!-- Filters Template -->
 <template name="filters">
 	<div id="filters">
 		<div class="filters-container">
-			<h3>Hello!</h3>
+			<ul class="filters-list">
+				{{#each commodities}}
+					{{> commodity}}
+				{{/each}}
+			</ul>
 		</div>
+	</div>
+</template>
+
+<!-- Commodity Template -->
+<template name="commodity">
+	<li>
+		<input type="image" id="{{name}}" src="images/icons/{{name}}.png">
+	</li> 
+	<div id="globalPrice">
+		<h3>Global price of {{activeName}}: <span>{{price}}</span></h3>
 	</div>
 </template>
 
@@ -28,11 +42,25 @@
 	<div id="directions">
 		<div class="directions-container">
 			<div id="title" class="collapse in">
-				<h1>Text your price for a commodity to {number}
-					<span>Example Text Messages: "corn: 1.59", "coffee: 2.21", "wheat: 1.21"</span>
+				<h1>Text to (267)463-4232, the price you sold your commodity.
+					<span>
+						Example Text Messages: "I sold 4 corn at 1.59", "I sold 5 coffee at 13.37", "I sold 17 wheat at 2.22"
+					</span>
+					<button id="zoomBtn">
+						Zoom {{direction}} Pennapps
+					</button>
 				</h1>
 			</div>
 		</div>
 	</div>
 </template>
+
+<!-- No longer using the temporary phone interface.
+<template name="tempPhone">
+	<div id="tempPhone">
+		<div class="tempPhone-container">
+			<input class="form-control"type="text">
+		</div>
+	</div>
+</template> -->
 
