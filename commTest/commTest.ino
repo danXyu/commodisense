@@ -63,22 +63,44 @@ void setup() {
   lcd.clear();
   lcd.setCursor(0,1);
   Serial.println("connecting...");
- 
-  // if you get a connection, report back via serial:
-  if (client.connect(server, 80)) {
-    lcd.clear();
-    lcd.setCursor(0,1);
-    lcd.print("connected");
-    // Make a HTTP request:
-    client.println("GET /ardy/coffee HTTP/1.1");
-    client.println("Host: 107.170.7.172");
-    client.println("Connection: close");
-    client.println();
-  } 
-  else {
-    // kf you didn't get a connection to the server:
-    Serial.println("connection failed");
-  }
+   while(true) {
+      // if you get a connection, report back via serial:
+      if (client.connect(server, 80)) {
+        lcd.clear();
+        lcd.setCursor(0,1);
+        lcd.print("connected");
+        // Make a HTTP request:
+        client.println("GET /ardy/coffee HTTP/1.1");
+        client.println("Host: 107.170.7.172");
+        client.println("Connection: close");
+        client.println();
+        if (client.available()) {
+          char c = client.read();
+        
+          if (counter == 7){
+            lcd.clear();
+          }
+          if (counter == 8){
+      //lcd.clear();
+          delay(100);
+      
+          lcd.print(c);
+          Serial.print(c);
+        }
+        if (c == '\n') {
+          counter = counter + 1;
+          Serial.print(counter);
+          if (counter == 8){
+            lcd.print("CFFE:$");
+          }
+          }
+        }
+      } 
+      else {
+        // kf you didn't get a connection to the server:
+        Serial.println("connection failed");
+      }
+   }
 }
 
 void loop()
